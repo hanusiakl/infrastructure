@@ -1,4 +1,4 @@
-pipelineJob("flight.web.qa") {
+pipelineJob("flight.web/flight.web.qa") {
     description("Build and deploy flight web app from develop branch on qa environment.")
     keepDependencies(false)
     disabled(false)

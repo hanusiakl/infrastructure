@@ -1,4 +1,4 @@
-pipelineJob("flight.web.staging") {
+pipelineJob("flight.web/flight.web.staging") {
     description("Build and deploy flight web app from main branch on staging environment.")
     keepDependencies(false)
     disabled(false)

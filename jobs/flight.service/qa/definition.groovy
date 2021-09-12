@@ -1,4 +1,4 @@
-pipelineJob("flight.service.qa") {
+pipelineJob("flight.service/flight.service.qa") {
     description("Build and deploy flight service from develop branch on qa environment.")
     keepDependencies(false)
     disabled(false)

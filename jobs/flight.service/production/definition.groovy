@@ -1,4 +1,4 @@
-pipelineJob("flight.service.production") {
+pipelineJob("flight.service/flight.service.production") {
     description("Build and deploy flight service from main branch on production environment.")
     keepDependencies(false)
     disabled(false)
