@@ -1,3 +1,5 @@
+folder("flight.service") {
+}
 pipelineJob("flight.service/flight.service.development") {
     description("Build and deploy flight service from develop branch on development environment.")
     keepDependencies(false)

@@ -1,3 +1,5 @@
+folder("flight.web") {
+}
 pipelineJob("flight.web/flight.web.development") {
     description("Build and deploy flight web app from develop branch on development environment.")
     keepDependencies(false)
