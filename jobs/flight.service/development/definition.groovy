@@ -15,11 +15,11 @@ pipelineJob("flight.service/flight.service.development") {
                 git  {
                     branch('*/develop')
                     remote {
-                        url('......')
+                        url('https://github.com/hanusiakl/flight.service.git')
                     }
                 }
             }
-            scriptPath('CI/jenkins/development.Jenkinsfile')
+            scriptPath('infrastructure/jenkins/development.Jenkinsfile')
         }
     }
 }
