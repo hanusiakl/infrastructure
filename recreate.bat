@@ -7,6 +7,6 @@ REM To be sure that pvc is deleted run `kubectl get pvc --namespace=jenkins`
 timeout /t 15 /nobreak
 
 echo "Installing jenkins..."
-helm install jenkins jenkins/jenkins  -f ./helm/values.yaml -n=jenkins
+helm install jenkins jenkins/jenkins  -f ./helm/jenkins/values.yaml -n=jenkins
 
 
