@@ -240,10 +240,9 @@ controller:
     - gatling:1.3.0
     - cloudbees-folder:6.16
     # - dashboard-view
-    # - greenballs
+    - greenballs:1.15.1
     # - build-name-setter
-    - sonar:2.13.1
-    - sonar-quality-gates:1.3.1
+    - kubernetes-credentials-provider:0.20
     # - git-parameter
     # - timestamper
     # - rich-text-publisher-plugin
@@ -318,14 +317,31 @@ controller:
   # /var/jenkins_home/casc_configs (by default) and will be processed by the Configuration as Code Plugin.  The lines after each |
   # become the content of the configuration yaml file.  The first line after this is a JCasC root element, eg jenkins, credentials,
   # etc.  Best reference is https://<jenkins_url>/configuration-as-code/reference.  The example below creates a welcome message:
-
   JCasC:
     enabled: true
-    welcome-message:
-      jenkins:
-        systemMessage: Welcome to our CI\CD server.  This Jenkins is configured and managed 'as code'.
+
     defaultConfig: false
     configScripts:
+      kubernetes-cloud: |
+        jenkins:
+          clouds:
+            - kubernetes:
+                jenkinsUrl: "http://jenkins:8080/"
+                jenkinsTunnel: "jenkins-agent:50000"
+                name: "kubernetes"
+                namespace: "jenkins"
+                serverUrl: "https://kubernetes.docker.internal:6443"
+        credentials:
+          system:
+            domainCredentials:
+              - credentials:
+                  - usernamePassword:
+                      scope: GLOBAL
+                      id: "docker"
+                      username: "----"
+                      password: "----"
+                      description: "Username/Password Credentials for some-user"
+
       seed-jobs: |
         jobs:
           - script: >
