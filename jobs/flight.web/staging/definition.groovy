@@ -15,11 +15,14 @@ pipelineJob("flight.web/flight.web.staging") {
                 git  {
                     branch('*/main')
                     remote {
-                        url('......')
+                        url('https://github.com/hanusiakl/flight.web.git')
                     }
                 }
             }
             scriptPath('CI/jenkins/staging.Jenkinsfile')
         }
+    }
+    triggers {
+        cron('H/5 * * * *')
     }
 }
