@@ -23,6 +23,6 @@ pipelineJob("flight.service/flight.service.development") {
         }
     }
     triggers {
-        cron('H/5 * * * *')
+        pollSCM('H/5 * * * *')
     }
 }
