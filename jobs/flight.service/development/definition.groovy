@@ -23,6 +23,8 @@ pipelineJob("flight.service/flight.service.development") {
         }
     }
     triggers {
-        pollSCM('H/5 * * * *')
+        scm('H/5 * * * *') {
+            ignorePostCommitHooks(false)
+        }
     }
 }
