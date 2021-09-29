@@ -22,7 +22,4 @@ pipelineJob("flight.web/flight.web.staging") {
             scriptPath('infrastructure/jenkins/staging.Jenkinsfile')
         }
     }
-    triggers {
-        cron('H/5 * * * *')
-    }
 }
