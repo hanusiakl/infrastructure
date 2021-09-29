@@ -19,7 +19,7 @@ pipelineJob("flight.web/flight.web.staging") {
                     }
                 }
             }
-            scriptPath('CI/jenkins/staging.Jenkinsfile')
+            scriptPath('infrastructure/jenkins/staging.Jenkinsfile')
         }
     }
     triggers {
