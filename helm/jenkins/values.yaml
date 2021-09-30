@@ -338,8 +338,8 @@ controller:
                   - usernamePassword:
                       scope: GLOBAL
                       id: "docker"
-                      username: "lehudocker"
-                      password: "nasher8888"
+                      username: "------"
+                      password: "------"
                       description: "Username/Password Credentials for some-user"
 
       seed-jobs: |
