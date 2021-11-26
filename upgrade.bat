@@ -1,5 +1,5 @@
 @echo off
 echo "Upgrading jenkins..."
-helm upgrade jenkins jenkins/jenkins  -f ./helm/jenkins/values.yaml -n=jenkins
+helm upgrade jenkins jenkins/jenkins  -f ./jenkins/helm/values.yaml -n=jenkins
 
 

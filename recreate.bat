@@ -8,6 +8,6 @@ timeout /t 20 /nobreak
 
 echo "Installing jenkins..."
 kubectl create namespace jenkins
-helm install jenkins jenkins/jenkins  -f ./helm/jenkins/values.yaml -n=jenkins
+helm install jenkins jenkins/jenkins  -f ./jenkins/helm/values.yaml -n=jenkins
 
 

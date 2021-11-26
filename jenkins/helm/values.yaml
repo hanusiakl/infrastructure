@@ -225,7 +225,7 @@ controller:
     - blueocean
     - simple-theme-plugin
     - workflow-job
-    - job-dsl
+    - job-dsl:1.77
     - htmlpublisher
     - kubernetes-cd
     - git-client
@@ -238,14 +238,9 @@ controller:
     - junit-attachments
     - nunit
     - cloudbees-folder
-    # - dashboard-view
-    - greenballs:1.15.1
-    # - build-name-setter
-    - kubernetes-credentials-provider:0.20
-    # - git-parameter
-    # - timestamper
-    # - rich-text-publisher-plugin
-
+    - dashboard-view
+    - greenballs
+    - kubernetes-credentials-provider
 
   # Set to false to download the minimum required version of all dependencies.
   installLatestPlugins: true
@@ -359,7 +354,7 @@ controller:
                 }
                 steps {
                   jobDsl {
-                    targets 'jobs/**/*.groovy'
+                    targets 'jenkins/jobs/**/*.groovy'
                   }
                 }
               }
